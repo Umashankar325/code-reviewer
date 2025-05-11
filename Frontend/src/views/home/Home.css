@@ -1,0 +1,45 @@
+.home{
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+  padding: 1rem;
+}
+.home-section button{
+  /* margin: 2px; */
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(4, 122, 218);
+  color: rgb(251, 231, 224);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.home-section button:hover{
+  background-color: rgb(4, 92, 164);
+}
+
+.home-section .projects{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1rem
+}
+.home-section .project{
+  padding: 0.5rem 1rem;
+  border:1px solid rgba(151, 148, 148, 0.925)
+  ;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.noprojects{
+  padding: 0.5rem 1rem;
+  border:1px solid rgba(151, 148, 148, 0.925)
+  ;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  width: 12rem;
+  font-size: 20px;
+  text-align: center;
+
+}

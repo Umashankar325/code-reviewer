@@ -1,0 +1,216 @@
+*{
+  margin: 0;padding: 0;
+  box-sizing: border-box;
+}
+.project-main,
+.project-section {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+.project-section {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+.project-section > * {
+  height: 100%;
+  flex: 1;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.project-section .chat {
+  background-color: rgb(238, 245, 247);
+  position: relative;
+}
+.project-section .chat .messages {
+  padding: 1rem;
+  width: 80%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: column;
+  left: 50%;
+  position: absolute;
+  overflow-y: auto;
+  top: 0;
+  padding-bottom: 5rem;
+  height: 100%;
+}
+.project-section .chat .messages::-webkit-scrollbar {
+  display: none;
+}
+.project-section .chat .messages .message {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  max-width: 80%;
+  background-color: rgb(207, 207, 207);
+  width: fit-content;
+}
+.project-section .chat .input-aria {
+  position: absolute;
+  width: 80%;
+  bottom: 1rem;
+  background-color: rgb(220, 217, 217);
+  padding: 1rem;
+  transform: translateX(-50%);
+  border-radius: 0.7rem;
+  left: 50%;
+}
+.project-section .chat .input-aria input {
+  padding: 0.5rem 0.7rem;
+  width: 85%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.project-section .chat .input-aria button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: rgb(105, 102, 102);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.project-section .code {
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-section .code .language-select {
+  padding: 8px;
+  margin: 8px;
+  background-color: #2d2d2d;
+  color: #fff;
+  border: 1px solid #3e3e3e;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  width: 200px;
+}
+
+.project-section .code .language-select:hover {
+  border-color: #525252;
+}
+
+.project-section .code .language-select:focus {
+  border-color: #007acc;
+}
+
+.project-section .review {
+  background-color: rgb(239, 221, 212);
+  position: relative;
+  overflow-y: auto;
+  padding:3rem ;
+}
+
+.code-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.copy-button {
+  background: transparent;
+  border: 1px solid #666;
+  border-radius: 4px;
+  color: #fff;
+  padding: 4px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.copy-button:hover {
+  background: #444;
+  border-color: #888;
+}
+
+.copy-button i {
+  font-size: 16px;
+}
+
+.code-output {
+  height: 50%;
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.output-header h3 {
+  color: #fff;
+  margin: 0;
+}
+
+.run-button {
+  background: #2d9d3c;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 6px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.run-button:hover {
+  background: #37c44b;
+}
+
+.output-content {
+  background: #252525;
+  border-radius: 4px;
+  padding: 1rem;
+  min-height: 100px;
+}
+
+.output-content pre {
+  color: #fff;
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: "Consolas", monospace;
+}
+
+.project-section .review .get-review {
+  position: fixed;
+  /* top: ; */
+  top: 2rem;
+  right: 3rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #2d9d3c;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgb(37, 36, 36);
+}
+
+.project-section .review .copy-review{
+  position: fixed;
+  /* top: ; */
+  top: 2rem;
+  right: 10rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #2d9d3c;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgb(37, 36, 36);
+}
