@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 const Home = () => {
   const [projects, setProjects] = useState([]);
-  const [input, setInput] = useState("")
+  const [input, setInput] = useState("");
   const navigate = useNavigate();
 
   function navigateToProject(id) {
@@ -12,9 +12,13 @@ const Home = () => {
   }
 
   useEffect(() => {
-    axios.get("http://localhost:3000/project/getAllProjects").then((res) => {
-      setProjects(res.data.data);
-    });
+    axios
+      .get(
+        "https://code-reviewer-backend-iu4m.onrender.com/project/getAllProjects"
+      )
+      .then((res) => {
+        setProjects(res.data.data);
+      });
   }, []);
 
   return (

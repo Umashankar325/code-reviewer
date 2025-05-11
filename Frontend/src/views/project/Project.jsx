@@ -15,7 +15,7 @@ const Project = () => {
   const [language, setLanguage] = useState("javascript");
   const [output, setOutput] = useState("");
   const [isExecuting, setIsExecuting] = useState(false);
-  const [review, setReview] = useState(""); 
+  const [review, setReview] = useState("");
 
   const supportedLanguages = [
     { id: "javascript", name: "JavaScript" },
@@ -63,10 +63,13 @@ const Project = () => {
       setIsExecuting(true);
       setOutput("Executing code...");
 
-      const response = await axios.post("http://localhost:3000/code/execute", {
-        code,
-        language,
-      });
+      const response = await axios.post(
+        "https://code-reviewer-backend-iu4m.onrender.com/code/execute",
+        {
+          code,
+          language,
+        }
+      );
 
       setOutput(response.data.data.output || "No output");
     } catch (error) {
@@ -93,7 +96,7 @@ const Project = () => {
   }
 
   useEffect(() => {
-    const io = soketIo("http://localhost:3000", {
+    const io = soketIo("https://code-reviewer-backend-iu4m.onrender.com", {
       query: {
         Project: params.id,
       },

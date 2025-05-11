@@ -7,9 +7,12 @@ const CreateProject = () => {
   const navigate = useNavigate();
   async function handelSubmitt(e) {
     e.preventDefault();
-    const project = await axios.post("http://localhost:3000/project/create", {
-      projectName: projectName,
-    });
+    const project = await axios.post(
+      "https://code-reviewer-backend-iu4m.onrender.com/project/create",
+      {
+        projectName: projectName,
+      }
+    );
     navigate("/");
   }
 
