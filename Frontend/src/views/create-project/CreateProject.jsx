@@ -8,7 +8,7 @@ const CreateProject = () => {
   async function handelSubmitt(e) {
     e.preventDefault();
     const project = await axios.post(
-      "https://code-reviewer-backend-cd2b.onrender.com/project/create",
+      "https://code-reviewer-backend-9b3z.onrender.com/project/create",
       {
         projectName: projectName,
       }
