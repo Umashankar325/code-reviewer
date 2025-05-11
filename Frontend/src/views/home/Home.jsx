@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     axios
       .get(
-        "https://code-reviewer-backend-iu4m.onrender.com/project/getAllProjects"
+        "https://code-reviewer-backend-cd2b.onrender.com/project/getAllProjects"
       )
       .then((res) => {
         setProjects(res.data.data);

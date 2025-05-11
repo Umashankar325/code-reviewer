@@ -64,7 +64,7 @@ const Project = () => {
       setOutput("Executing code...");
 
       const response = await axios.post(
-        "https://code-reviewer-backend-iu4m.onrender.com/code/execute",
+        "https://code-reviewer-backend-cd2b.onrender.com/code/execute",
         {
           code,
           language,
@@ -96,7 +96,7 @@ const Project = () => {
   }
 
   useEffect(() => {
-    const io = soketIo("https://code-reviewer-backend-iu4m.onrender.com", {
+    const io = soketIo("https://code-reviewer-backend-cd2b.onrender.com", {
       query: {
         Project: params.id,
       },
