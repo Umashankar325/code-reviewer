@@ -4,7 +4,7 @@ import { io as soketIo } from "socket.io-client";
 import Editor from "@monaco-editor/react";
 import ReactMarkdown from "react-markdown";
 import axios from "axios";
-import "./project.css";
+import "./Project.css";
 
 const Project = () => {
   const params = useParams();
