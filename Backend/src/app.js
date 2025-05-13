@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "https://code-reviewer-frontend-r131.onrender.com",
+    origin: "https://code-reviewer-blond.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
