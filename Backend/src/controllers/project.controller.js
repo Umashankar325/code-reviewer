@@ -5,6 +5,8 @@ export async function createProjectController(req, res) {
   const { projectName } = req.body;
   const newProject = await createProject(projectName);
 
+  
+
   res.status(201).json({ status: "sucsses", data: newProject });
 }
 

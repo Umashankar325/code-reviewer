@@ -13,6 +13,8 @@ const CreateProject = () => {
         projectName: projectName,
       }
     );
+    // console.log(project);
+
     navigate("/");
   }
 
