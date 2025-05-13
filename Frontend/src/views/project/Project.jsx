@@ -108,12 +108,23 @@ const Project = () => {
     io.on("chat-res", (message) => {
       setMessages((prev) => [...prev, message]);
     });
-    io.on("code-review", (review) => {
-      setReview(review);
+
+    io.emit("code-history");
+    io.on("code-history", (code) => {
+      setCode(code);
     });
     io.on("code-update", (code) => {
       setCode(code);
     });
+
+    io.emit("review-history");
+    io.on("review-history", (review) => {
+      setReview(review);
+    });
+    io.on("review-history", (review) => {
+      setReview(review);
+    });
+
     setSoket(io);
   }, []);
 

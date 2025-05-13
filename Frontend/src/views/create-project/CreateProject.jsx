@@ -20,6 +20,7 @@ const CreateProject = () => {
     <main className="create-project">
       <section className="create-project-section">
         <form onSubmit={handelSubmitt}>
+          <h1>Create New Project</h1>
           <input
             type="text"
             name="projectName"
